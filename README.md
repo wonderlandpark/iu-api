@@ -14,11 +14,11 @@ https://iu.wonder.im
 
 ### `GET` /images/profile
 
-Profile Images of IU.
+Profile Image of IU.
 
 ### `GET` /images/gif
 
-GIF Images of IU.
+GIF Image of IU.
 
 ## RateLimit
 
