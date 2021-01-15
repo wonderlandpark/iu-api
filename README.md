@@ -1,6 +1,6 @@
 # IU API
 
-I'm a big fan of [IU](https://instagram.com/dlwmra).
+I'm a big fan of [IU](https://www.instagram.com/dlwlrma/).
 
 I needed an API to show random images of her.
 
