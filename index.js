@@ -12,7 +12,7 @@ const imageTag = fs.readdirSync('./images')
 const images = imageTag.map(el=> ({ type: el, list: fs.readdirSync(path.join('./images', el)) }))
 
 router.get('/', (ctx) => {
-    ctx.body = { hello: 'iu' }
+    ctx.body = { love: 'iu', document: 'https://github.com/wonderlandpark/iu-api' }
 })
 
 router.get('/images/:type', (ctx) => {
