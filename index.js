@@ -51,7 +51,7 @@ app.use(router.routes())
 app.use(router.allowedMethods())
 
 app.listen(4000, () => {
-    console.log('heurm server is listening to port 4000')
+    console.log('iu api server is listening to port 4000')
 })
 
 function random(items){
