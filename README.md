@@ -2,7 +2,7 @@
 
 I'm a big fan of [IU](https://instagram.com/dlwmra).
 
-I needed a API to show random images of her.
+I needed an API to show random images of her.
 
 ## BASE URL
 
