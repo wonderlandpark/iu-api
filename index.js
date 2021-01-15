@@ -1,6 +1,7 @@
 const Koa = require('koa')
 const Router = require('koa-router')
 const logger = require('koa-logger')
+const ratelimit = require('koa-ratelimit')
 const fs = require('fs')
 const path = require('path')
 
@@ -27,6 +28,21 @@ router.get('/images/:type', (ctx) => {
   ctx.body = image
 })
 
+app.use(ratelimit({
+  driver: 'memory',
+  duration: 60000,
+  errorMessage: 'Slowdown',
+  headers: {
+    remaining: 'Rate-Limit-Remaining',
+    reset: 'Rate-Limit-Reset',
+    total: 'Rate-Limit-Total'
+  },
+  max: 12,
+  whitelist: (ctx) => {
+    if(process.env.IU_API_TOKEN === (ctx.get('Authorization') ?? 'MUST_NOT_BE_A_KEY')) return true
+    return false
+  }
+}))
 app.use(logger())
 app.use(router.routes())
 app.use(router.allowedMethods())
