@@ -41,7 +41,6 @@ app.use(ratelimit({
   },
   max: 1,
   whitelist: (ctx) => {
-    console.log(process.env.IU_API_TOKEN === (ctx.get('Authorization') ?? 'MUST_NOT_BE_A_KEY'))
     if(process.env.IU_API_TOKEN === (ctx.get('Authorization') ?? 'MUST_NOT_BE_A_KEY')) return true
     return false
   }
