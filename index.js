@@ -31,7 +31,7 @@ router.get('/images/:type', (ctx) => {
 app.use(logger())
 app.use(ratelimit({
   driver: 'memory',
-  duration: 60000,
+  duration: 2000,
   errorMessage: { error: 'Slowdown' },
   db: new Map(),
   headers: {
@@ -39,7 +39,7 @@ app.use(ratelimit({
     reset: 'Rate-Limit-Reset',
     total: 'Rate-Limit-Total'
   },
-  max: 12,
+  max: 1,
   whitelist: (ctx) => {
     console.log(process.env.IU_API_TOKEN === (ctx.get('Authorization') ?? 'MUST_NOT_BE_A_KEY'))
     if(process.env.IU_API_TOKEN === (ctx.get('Authorization') ?? 'MUST_NOT_BE_A_KEY')) return true
