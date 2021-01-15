@@ -33,3 +33,7 @@ These are Ratelimit headers.
 | Rate-Limit-Remaining | containing the requests quota in the time window |
 | RateLimit-Remaining | containing the remaining requests quota in the current window |
 | RateLimit-Reset | containing the time remaining in the current window, specified in seconds or as a timestamp |
+
+## Contributing
+
+If you would like to add new images, please create a issue and let me know.
