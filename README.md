@@ -6,8 +6,8 @@ I needed an API to show random images of her.
 
 ## BASE URL
 
-```fix
-https://iu.wonder.im
+```
+https://iu.junseo.me
 ```
 
 ## Endpoints
